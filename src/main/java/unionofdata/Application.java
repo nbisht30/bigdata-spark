@@ -1,17 +1,14 @@
 package unionofdata;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.Partition;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
-import org.apache.log4j.Logger;
-import org.apache.log4j.Level; // to reduce Spark logs
 
-import javax.sound.midi.Soundbank;
-
-import java.sql.SQLOutput;
-
-import static org.apache.spark.sql.functions.*;
+import static org.apache.spark.sql.functions.concat;
+import static org.apache.spark.sql.functions.lit;
 
 public class Application {
     public static void main(String[] args) {
